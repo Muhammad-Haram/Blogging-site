@@ -1,32 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include('./partials/head') %>
-    <title>Signup</title>
-
+  <%- include('./partials/head') %>
+  <title>Signup</title>
 </head>
 <body>
-    <%- include('./partials/nav') %>
-    <div class="container mt-5">
-        <form action="/user/signup" method="post">
+  <%- include('./partials/nav') %>
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-5">
+        <div class="form-container">
+          <form class="shadow p-4 rounded bg-light" action="/user/signup" method="post">
+            <h2 class="text-center mb-4">Signup</h2>
             <div class="mb-3">
-                <label for="exampleFullName" class="form-label">Full Name</label>
-                <input type="text" class="form-control" name="fullName" id="exampleFullName">
-              </div>
+              <label for="exampleFullName" class="form-label">Full Name</label>
+              <input type="text" class="form-control" name="fullName" id="exampleFullName" placeholder="Enter your full name" required>
+            </div>
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp">
+              <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Enter your email" aria-describedby="emailHelp" required>
               <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
-           
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" name="password">
+              <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Enter your password" required>
             </div>
-           
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary w-100">Submit</button>
           </form>
+        </div>
+      </div>
     </div>
-    <%- include('./partials/scripts') %>
+  </div>
+  <%- include('./partials/scripts') %>
 </body>
 </html>
